@@ -212,7 +212,81 @@ $TotalWeeks=$TotalDays/7
     ?>
 </table>
 
-        
+ <h2>月曆</h2>
+<?php
+$today=date("Y-m-d");
+$month="2026-09";
+$FirstDay=$month."-01";
+$FirstDayWeek=date("w",strtotime($FirstDay));
+$MonthDays=date("t",strtotime($FirstDay));
+$LastDay=$month."-".$MonthDays;
+$LastDayWeek=date('w',strtotime($LastDay));
+$TotalDays=$MonthDays+$FirstDayWeek+(6-$LastDayWeek);
+$TotalWeeks=$TotalDays/7
+?>
+
+<h2>月曆</h2>
+<?php
+$today=date("Y-m-d");
+$month="2026-09";
+$FirstDay=$month."-01";
+$FirstDayWeek=date("w",strtotime($FirstDay));
+$MonthDays=date("t",strtotime($FirstDay));
+$LastDay=$month."-".$MonthDays;
+$LastDayWeek=date('w',strtotime($LastDay));
+$TotalDays=$MonthDays+$FirstDayWeek+(6-$LastDayWeek);
+$TotalWeeks=$TotalDays/7
+?>
+
+<h3>今天是<?= $today; ?></h3>
+<ul>
+    <li>這個月的天數一共有<?= $MonthDays; ?></li>
+    <li>這個月的第1天是<?= $FirstDay; ?></li>
+    <li>這個月的第1天是星期<?=$FirstDayWeek ;?></li>
+    <li>這個月的最後1天是<?= $LastDay ?></li>
+    <li>這個月的最後1天是星期<?=$LastDayWeek ;?></li>
+    <li>這個月曆一共要畫出(含空白)<?=$TotalDays ;?>格子</li>
+</ul>
+<style>
+    table{
+        border-collapse: collapse;
+        font-size:16px;
+    }
+    table td{
+        padding:5px 13px;
+        border:1px solid #999;
+    }
+
+</style>
+<h2><?= $month; ?>月</h2>
+<table>
+    <tr>
+        <td>日</td>
+        <td>一</td>
+        <td>二</td>
+        <td>三</td>
+        <td>四</td>
+        <td>五</td>
+        <td>六</td>
+    </tr>
+    <?php 
+    for($i=0;$i<$TotalWeeks;$i++){
+        echo "<tr>";
+        for($j=0;$j<7;$j++){
+            echo "<td data-date=''>";
+            $DayNumber=($i*7+$j)-($FirstDayWeek-1);
+            if($DayNumber>0 && $DayNumber<=$MonthDays){
+                echo $DayNumber;
+            }
+            echo "</td>";
+        }
+        echo "</tr>";
+    }
+
+    ?>
+</table>
+<hr>
+<hr>       
         
 </body>
 </html>
