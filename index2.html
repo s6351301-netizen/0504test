@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP 基礎語法學習紀錄</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 8px;
+        }
+
+        .header .date {
+            font-size: 0.95rem;
+            opacity: 0.85;
+        }
+
+        .course-list {
+            list-style: none;
+        }
+
+        .course-list li {
+            margin-bottom: 15px;
+        }
+
+        .course-list a {
+            display: block;
+            padding: 20px 25px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            font-size: 1.05rem;
+            font-weight: 500;
+            border-left: 5px solid #667eea;
+        }
+
+        .course-list a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateX(10px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            border-left-color: #764ba2;
+        }
+
+        .course-list a:active {
+            transform: translateX(8px);
+        }
+
+        .course-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-right: 10px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .course-list a:hover .course-number {
+            background: white;
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 PHP 基礎語法學習</h1>
+            <p class="subtitle">程式設計課程學習紀錄</p>
+            <p class="date">📅 2026 年 4 月 21 日</p>
+        </div>
+
+        <ul class="course-list">
+            <li>
+                <a href="01-string.php">
+                    <span class="course-number">01</span>
+                    字串處理
+                </a>
+            </li>
+            <li>
+                <a href="02-datetime.php">
+                    <span class="course-number">02</span>
+                    時間/日期處理
+                </a>
+            </li>
+            <li>
+                <a href="03-calendar.php">
+                    <span class="course-number">03</span>
+                    萬年曆練習(當月)
+                </a>
+            </li>
+            <li>
+                <a href="04-calendar2.php">
+                    <span class="course-number">04</span>
+                    萬年曆練習(可調整月)
+                </a>
+            </li>
+            <li>
+                <a href="05-calendar3.php">
+                    <span class="course-number">05</span>
+                    萬年曆練習(無限月份)
+                </a>
+            </li>
+            <li>
+                <a href="06-BMI.php">
+                    <span class="course-number">06</span>
+                    BMI計算器
+                </a>
+            </li>
+            <li>
+                <a href="07-login-get.php">
+                    <span class="course-number">07</span>
+                    登入檢查
+                </a>
+            </li>
+            <li>
+                <a href="08-login-cookie.php">
+                    <span class="course-number">08</span>
+                    登入檢查(Cookie)
+                </a>
+            </li>
+            <li>
+                <a href="09-login-session.php">
+                    <span class="course-number">09</span>
+                    登入檢查(Session)
+                </a>
+            </li>
+
+
+        </ul>
+    </div>
+</body>
+</html>
